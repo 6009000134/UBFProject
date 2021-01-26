@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+  <!---->
+  <subcription event="UFIDA.U9.SM.SO.SOLine.AfterUpdated">
+    <subscriber  type="Auctus.SOLineBE.SOLineUpdated,Auctus.SOLineBE.dll"/>
+  </subcription>
+  <!--删除后BE-->
+  <subcription event="UFIDA.U9.SM.SO.SOLine.AfterDeleted">
+    <subscriber  type="Auctus.SOLineBE.SOLineAD,Auctus.SOLineBE.dll"/>
+  </subcription>
+</pub-sub>

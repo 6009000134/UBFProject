@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="webservices.WorkflowServiceToOtherSystem.weaver.com.cn" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" targetNamespace="webservices.WorkflowServiceToOtherSystem.weaver.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="webservices.WorkflowServiceToOtherSystem.weaver.com.cn">
+      <xsd:element name="forceOverWorkflow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="forceOverWorkflowResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createWorkflow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createWorkflowResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWorkflow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWorkflowResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteWorkflowResponse">
+    <wsdl:part name="parameters" element="tns:deleteWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="forceOverWorkflowResponse">
+    <wsdl:part name="parameters" element="tns:forceOverWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="createWorkflowRequest">
+    <wsdl:part name="parameters" element="tns:createWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="deleteWorkflowRequest">
+    <wsdl:part name="parameters" element="tns:deleteWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="forceOverWorkflowRequest">
+    <wsdl:part name="parameters" element="tns:forceOverWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="createWorkflowResponse">
+    <wsdl:part name="parameters" element="tns:createWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WorkflowServiceToOtherSystemPortType">
+    <wsdl:operation name="forceOverWorkflow">
+      <wsdl:input name="forceOverWorkflowRequest" message="tns:forceOverWorkflowRequest" />
+      <wsdl:output name="forceOverWorkflowResponse" message="tns:forceOverWorkflowResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createWorkflow">
+      <wsdl:input name="createWorkflowRequest" message="tns:createWorkflowRequest" />
+      <wsdl:output name="createWorkflowResponse" message="tns:createWorkflowResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWorkflow">
+      <wsdl:input name="deleteWorkflowRequest" message="tns:deleteWorkflowRequest" />
+      <wsdl:output name="deleteWorkflowResponse" message="tns:deleteWorkflowResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkflowServiceToOtherSystemHttpBinding" type="tns:WorkflowServiceToOtherSystemPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="forceOverWorkflow">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="forceOverWorkflowRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="forceOverWorkflowResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createWorkflow">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createWorkflowRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createWorkflowResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWorkflow">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteWorkflowRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteWorkflowResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkflowServiceToOtherSystem">
+    <wsdl:port name="WorkflowServiceToOtherSystemHttpPort" binding="tns:WorkflowServiceToOtherSystemHttpBinding">
+      <wsdlsoap:address location="http://192.168.20.32/services/WorkflowServiceToOtherSystem" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

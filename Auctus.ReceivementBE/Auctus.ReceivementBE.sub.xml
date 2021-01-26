@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+  <!---->
+  <subcription event="UFIDA.U9.PM.Rcv.Receivement.AfterInserted">
+    <subscriber  type="Auctus.ReceivementBE.ReceivementAI,Auctus.ReceivementBE.dll"/>
+  </subcription>
+  <subcription event="UFIDA.U9.PM.Rcv.Receivement.AfterUpdated">
+    <subscriber  type="Auctus.ReceivementBE.ReceivementAU,Auctus.ReceivementBE.dll"/>
+  </subcription>
+</pub-sub>

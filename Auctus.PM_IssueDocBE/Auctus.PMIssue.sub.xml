@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+  <!---->
+  <subcription event="UFIDA.U9.PM.PMIssue.PMIssueDoc.AfterInserted">
+    <subscriber  type="Auctus.PM_IssueDocBE.PM_IssueDocAfterInserted,Auctus.PM_IssueDocBE.dll"/>
+  </subcription>
+  <!--<subcription event="UFIDA.U9.PM.PMIssue.PMIssueDoc.AfterUpdated">
+    <subscriber  type="Auctus.PM_IssueDocBE.PM_IssueDocAfterUpdated,Auctus.PM_IssueDocBE.dll"/>
+  </subcription>-->
+</pub-sub>

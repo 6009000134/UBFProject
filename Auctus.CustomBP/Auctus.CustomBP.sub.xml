@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BPSVExtend>
+  <Extend on="UFIDA.U9.MO.MO.StartMO" extendType="Auctus.CustomBP.StartMOBD,Auctus.CustomBP.dll"/>
+</BPSVExtend>

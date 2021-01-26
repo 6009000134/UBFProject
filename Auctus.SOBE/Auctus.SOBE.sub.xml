@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+  <!---->
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterInserted">
+    <subscriber  type="Auctus.SOBE.SOAI,Auctus.SOBE.dll"/>
+  </subcription>
+</pub-sub>

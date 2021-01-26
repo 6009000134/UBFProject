@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27454DC0-A3B9-4CA2-A5ED-DA72491C786C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auctus.IssueDocBE</RootNamespace>
+    <AssemblyName>Auctus.IssueDocBE</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UFIDA.U9.Base.BaseBE, Version=25.5401.29554.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.Base.BaseBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBE.Deploy, Version=25.5401.28789.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubBE, Version=25.5401.29764.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.CBO.PubBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubBE.Deploy, Version=25.5401.29229.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.CBO.PubBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubSV, Version=25.5401.24312.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.CBO.PubSV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubSV.Agent, Version=25.5401.15310.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.CBO.PubSV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubSV.Deploy, Version=25.5401.15310.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.CBO.PubSV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.SCMBE, Version=25.5401.29769.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.CBO.SCMBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.SCMBE.Deploy, Version=25.5401.28878.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.CBO.SCMBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.InvDoc.InvDocBE, Version=25.5401.29634.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.InvDoc.InvDocBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.InvDoc.InvDocBE.Deploy, Version=25.5401.29186.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.InvDoc.InvDocBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscRcvISV, Version=25.5401.29632.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscRcvISV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscRcvISV.Agent, Version=25.5401.25497.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscRcvISV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscRcvISV.Deploy, Version=25.5401.25497.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscRcvISV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscShipISV, Version=25.5401.29632.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscShipISV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscShipISV.Agent, Version=25.5401.25497.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscShipISV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.MiscShipISV.Deploy, Version=25.5401.25497.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UFIDA.U9.ISV.MiscShipISV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.MO.MOBE, Version=25.5401.29402.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFIDA.U9.MO.MOBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.AopFrame, Version=25.5401.28703.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFSoft.UBF.AopFrame.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Business, Version=25.5401.28715.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFSoft.UBF.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Execution, Version=25.5401.28703.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFSoft.UBF.Execution.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.PL, Version=25.5401.28612.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFSoft.UBF.PL.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.DataAccess, Version=25.5401.28612.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auctus.MiscShipmentBE\DLL\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MOIssueDoc.cs" />
+    <Compile Include="MOIssueDocUpdated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Auctus.IssueDocBE.sub.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DLL\UFIDA.U9.Base.BaseBE.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.Base.BaseBE.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.PubBE.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.PubBE.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.PubSV.Agent.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.PubSV.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.PubSV.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.SCMBE.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.CBO.SCMBE.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocBE.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocBE.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocBP.Agent.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocBP.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocBP.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocSV.Agent.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.InvDocSV.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.InvDoc.INVDocSV.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscRcvISV.Agent.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscRcvISV.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscRcvISV.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscShipISV.Agent.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscShipISV.Deploy.dll" />
+    <Content Include="DLL\UFIDA.U9.ISV.MiscShipISV.dll" />
+    <Content Include="DLL\UFIDA.U9.MO.MOBE.dll" />
+    <Content Include="DLL\UFSoft.UBF.AopFrame.dll" />
+    <Content Include="DLL\UFSoft.UBF.Business.dll" />
+    <Content Include="DLL\UFSoft.UBF.Execution.dll" />
+    <Content Include="DLL\UFSoft.UBF.PL.dll" />
+    <Content Include="DLL\UFSoft.UBF.Sys.Database.dll" />
+    <Content Include="DLL\UFSoft.UBF.Util.Data.dll" />
+    <Content Include="DLL\UFSoft.UBF.Util.DataAccess.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

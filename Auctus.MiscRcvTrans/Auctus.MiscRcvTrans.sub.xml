@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+  <!---->
+  <subcription event="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTrans.AfterUpdated">
+    <subscriber  type="Auctus.MiscRcvTrans.MiscRcvTransAU,Auctus.MiscRcvTrans.dll"/>
+  </subcription>
+</pub-sub>

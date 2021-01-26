@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6DF9391-DFAC-4E73-BC24-2D3BF2C865FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auctus.MiscShip.UIPlugin</RootNamespace>
+    <AssemblyName>Auctus.MiscShip.UIPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UBF.System">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL\UBF.System.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.UI.PDHelper">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\UFIDA.U9.UI.PDHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Sys.Database">
+      <HintPath>..\Auctus.PurchaseOrderBE\DLL\UFSoft.UBF.Sys.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.Controls.Interface">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\新建文件夹\UFSoft.UBF.UI.Controls.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.Engine.Runtime">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\新建文件夹\UFSoft.UBF.UI.Engine.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.FormProcess">
+      <HintPath>D:\yonyou\Portal\ApplicationServer\bin\UFSoft.UBF.UI.FormProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.IView">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\新建文件夹\UFSoft.UBF.UI.IView.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.MD.Runtime">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\新建文件夹\UFSoft.UBF.UI.MD.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.WebControls.BaseComponent">
+      <HintPath>..\Auctus.Reschedule.UIPlugin\DLL2\新建文件夹\UFSoft.UBF.UI.WebControls.BaseComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.DataAccess">
+      <HintPath>..\Auctus.IssueDocBE\DLL\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFunction.cs" />
+    <Compile Include="MiscShipUIPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebPartExtend.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
