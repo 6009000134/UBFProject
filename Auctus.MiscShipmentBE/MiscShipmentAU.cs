@@ -65,7 +65,10 @@ namespace Auctus.MiscShipmentBE
                         baseInfo.creator = vt;
                         baseInfo.fpkid = miscShip.ID.ToString();//单据ID
                         //baseInfo.isnextflow = 0;
-                        //baseInfo.requestid = "1025";                        
+                        if (miscShip.DescFlexField.PrivateDescSeg5=="是")
+                        {
+                            baseInfo.requestid = miscShip.DescFlexField.PrivateDescSeg3;
+                        }                        
                         //baseInfo.requestlevel = 1;  
                         baseInfo.isnextflow = 1;
 
@@ -83,14 +86,14 @@ namespace Auctus.MiscShipmentBE
                         if (miscShip.DescFlexField.PrivateDescSeg3 != "")
                         {
                             //OA弃审后，U9重新提交流程，应该走更细OA流程接口
-                            //if (miscShip.DescFlexField.PrivateDescSeg4 == "1")
-                            //{
-                            v.value = miscShip.DescFlexField.PrivateDescSeg3;
-                            main.gllc = v;
-                            //main.requestid = miscShip.DescFlexField.PrivateDescSeg3; //requestid不为空，则为更新流程接口                               
-                            //string sql = string.Format(@"UPDATE dbo.InvDoc_MiscShip SET DescFlexField_PrivateDescSeg4='0' WHERE ID = {0}", miscShip.ID);
-                            //DataAccessor.RunSQL(DatabaseManager.GetCurrentConnection(), sql, null);
-                            //}
+                            if (miscShip.DescFlexField.PrivateDescSeg5 != "是")
+                            {
+                                v.value = miscShip.DescFlexField.PrivateDescSeg3;
+                                main.gllc = v;
+                                //main.requestid = miscShip.DescFlexField.PrivateDescSeg3; //requestid不为空，则为更新流程接口                               
+                                //string sql = string.Format(@"UPDATE dbo.InvDoc_MiscShip SET DescFlexField_PrivateDescSeg4='0' WHERE ID = {0}", miscShip.ID);
+                                //DataAccessor.RunSQL(DatabaseManager.GetCurrentConnection(), sql, null);
+                            }
                         }
                         //申请人
                         vt = new ValueTrans();
@@ -306,7 +309,7 @@ namespace Auctus.MiscShipmentBE
                         //调用OA接口
                         string OAFlowID = pubFun.OAService(json);
                         //更新返回的流程ID
-                        string UpSQL = string.Format(@"UPDATE dbo.InvDoc_MiscShip SET DescFlexField_PrivateDescSeg3='{0}' WHERE ID = {1}", OAFlowID, miscShip.ID.ToString());
+                        string UpSQL = string.Format(@"UPDATE dbo.InvDoc_MiscShip SET DescFlexField_PrivateDescSeg3='{0}',DescFlexField_PrivateDescSeg5='' WHERE ID = {1}", OAFlowID, miscShip.ID.ToString());
                         DataAccessor.RunSQL(DatabaseManager.GetCurrentConnection(), UpSQL, null);
                         log.Error("结束调用OA审批接口");
                     }

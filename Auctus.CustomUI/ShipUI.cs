@@ -55,7 +55,7 @@ namespace Auctus.CustomUI
                 //btnQuickCreate
                 //查询OA的流程ID
                 string sql = string.Format(@"SELECT 
-a.DescFlexField_PrivateDescSeg6 OAFlowID,b.DescFlexField_PrivateDescSeg1 IsToOA,a.Status
+a.DescFlexField_PrivateDescSeg8 OAFlowID,b.DescFlexField_PrivateDescSeg1 IsToOA,a.Status
 FROM dbo.SM_Ship a INNER JOIN dbo.SM_ShipDocType b ON a.DocumentType=b.ID WHERE a.ID={0}", rec["ID"].ToString());
                 DataSet ds = new DataSet();
                 string OAFlowID = "";
@@ -116,7 +116,7 @@ FROM dbo.SM_Ship a INNER JOIN dbo.SM_ShipDocType b ON a.DocumentType=b.ID WHERE 
         public void btnOAFlow_Click(object sender, EventArgs e)
         {
             IUIRecord rec = uiPart.Model.Views["Ship"].FocusedRecord;
-            string sql = string.Format(@"SELECT  a.DescFlexField_PrivateDescSeg6 OAFlowID 
+            string sql = string.Format(@"SELECT  a.DescFlexField_PrivateDescSeg8 OAFlowID 
 FROM dbo.SM_Ship a WHERE a.ID={0}", rec["ID"].ToString());
             DataSet ds = new DataSet();
             string OAFlowID = "";
