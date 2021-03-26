@@ -37,24 +37,24 @@
     <subscriber  type="Auctus.CustomBE.MOIssue.MOIssueAU,Auctus.CustomBE.dll"/>
   </subcription>
 
-  <!--工单BI-->
-  <subcription event="UFIDA.U9.MO.MO.MO.BeforeInserted">
-    <subscriber  type="Auctus.CustomBE.MOAI,Auctus.CustomBE.dll"/>
+  <!--工单AI-->
+  <subcription event="UFIDA.U9.MO.MO.MO.AfterInserting">
+    <subscriber  type="Auctus.CustomBE.MOBI,Auctus.CustomBE.dll"/>
   </subcription>
-  <!--销售BI-->
-  <subcription event="UFIDA.U9.SM.SO.SO.BeforeInserted">
+  <!--销售AI-->
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterInserting">
     <subscriber  type="Auctus.CustomBE.SO.SOBI,Auctus.CustomBE.dll"/>
   </subcription>
-  <!--收货BI-->
-  <subcription event="UFIDA.U9.PM.Rcv.Receivement.BeforeInserted">
+  <!--收货AI-->
+  <subcription event="UFIDA.U9.PM.Rcv.Receivement.AfterInserting">
     <subscriber  type="Auctus.CustomBE.PM.ReceivementBI,Auctus.CustomBE.dll"/>
   </subcription>
-  <!--采购BI-->
-  <subcription event="UFIDA.U9.PM.PO.PurchaseOrder.BeforeInserted">
+  <!--采购AI-->
+  <subcription event="UFIDA.U9.PM.PO.PurchaseOrder.AfterInserting">
     <subscriber  type="Auctus.CustomBE.PM.PurchaseOrderBI,Auctus.CustomBE.dll"/>
   </subcription>
-  <!--杂发单BI-->
-  <subcription event="UFIDA.U9.InvDoc.MiscShip.MiscShipment.BeforeInserted">
+  <!--杂发单AI-->
+  <subcription event="UFIDA.U9.InvDoc.MiscShip.MiscShipment.AfterInserting">
     <subscriber  type="Auctus.CustomBE.InvDoc.MiscShipmentBI,Auctus.CustomBE.dll"/>
   </subcription>
 

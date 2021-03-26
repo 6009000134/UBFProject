@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UFIDA.U9.Base;
 using UFIDA.U9.Base.UserRole;
 using UFIDA.U9.CBO.PubBE.YYC;
+using UFIDA.U9.CBO.SCM.Enums;
 using UFIDA.U9.SM.Ship;
 using UFSoft.UBF.Sys.Database;
 using UFSoft.UBF.Util.Cache;
@@ -59,11 +60,11 @@ namespace Auctus.CustomBE
                             BaseInfo baseInfo;
                             if (entity.DescFlexField.PrivateDescSeg7 == "是")
                             {
-                                baseInfo = Auctus.Common.Utils.GenerateOABaseInfo(user.Code, PubFunction.GetOAInfoByCode("11"), entity.ID.ToString(), 1, entity.DescFlexField.PrivateDescSeg6, 1, "出货单：" + entity.DocNo);
+                                baseInfo = Auctus.Common.Utils.GenerateOABaseInfo(user.Code, PubFunction.GetOAInfoByCode("12"), entity.ID.ToString(), 1, entity.DescFlexField.PrivateDescSeg8, 1, "出货单：" + entity.DocNo);
                             }
                             else
                             {
-                                baseInfo = Auctus.Common.Utils.GenerateOABaseInfo(user.Code, PubFunction.GetOAInfoByCode("11"), entity.ID.ToString(), 1, "", 1, "出货单：" + entity.DocNo);
+                                baseInfo = Auctus.Common.Utils.GenerateOABaseInfo(user.Code, PubFunction.GetOAInfoByCode("12"), entity.ID.ToString(), 1, "", 1, "出货单：" + entity.DocNo);
                                 //设置OA上下文
                                 if (!string.IsNullOrEmpty(entity.DescFlexField.PrivateDescSeg7))
                                 {
@@ -122,9 +123,13 @@ namespace Auctus.CustomBE
                             foreach (ShipLine item in entity.ShipLines)
                             {
                                 Dictionary<string, object> dicDt = new Dictionary<string, object>();
+                                
                                 dicValue = new Dictionary<string, object>();
                                 dicValue.Add("value", item.ID);
                                 dicDt.Add("xid", dicValue);
+                                dicValue = new Dictionary<string, object>();
+                                dicValue.Add("value", item.DonationType.Value + 1);
+                                dicDt.Add("mflx", dicValue);
                                 dicValue = new Dictionary<string, object>();
                                 dicValue.Add("value", item.DocLineNo);
                                 dicDt.Add("xh", dicValue);
@@ -226,11 +231,11 @@ namespace Auctus.CustomBE
                             string UpSQL = "";
                             if (entity.DescFlexField.PrivateDescSeg7 == "是")
                             {
-                                UpSQL = string.Format(@"UPDATE dbo.SM_Ship SET DescFlexField_PrivateDescSeg6='{0}',DescFlexField_PrivateDescSeg7='' WHERE ID = {1}", OAFlowID, entity.ID.ToString());
+                                UpSQL = string.Format(@"UPDATE dbo.SM_Ship SET DescFlexField_PrivateDescSeg8='{0}',DescFlexField_PrivateDescSeg7='' WHERE ID = {1}", OAFlowID, entity.ID.ToString());
                             }
                             else
                             {
-                                UpSQL = string.Format(@"UPDATE dbo.SM_Ship SET DescFlexField_PrivateDescSeg6='{0}' WHERE ID = {1}", OAFlowID, entity.ID.ToString());
+                                UpSQL = string.Format(@"UPDATE dbo.SM_Ship SET DescFlexField_PrivateDescSeg8='{0}' WHERE ID = {1}", OAFlowID, entity.ID.ToString());
                             }
                             DataAccessor.RunSQL(DatabaseManager.GetCurrentConnection(), UpSQL, null);
 
