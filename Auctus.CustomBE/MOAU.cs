@@ -118,6 +118,9 @@ namespace Auctus.CustomBE
                             dicValue = new Dictionary<string, object>();
                             dicValue.Add("value", entity.Org.ID.ToString());
                             dicMain.Add("u9zz", dicValue);
+                            dicValue = new Dictionary<string, object>();
+                            dicValue.Add("value", entity.Memo);
+                            dicMain.Add("bz", dicValue);
 
                             if (ds.Tables.Count == 0)
                             {
